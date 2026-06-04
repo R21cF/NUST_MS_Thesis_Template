@@ -1,0 +1,401 @@
+\documentclass[a4paper, 12pt, twoside]{report}
+
+\usepackage{amssymb, amscd, amsmath, amsthm, amsfonts, enumerate}
+\usepackage{mathtools}
+\usepackage{array}
+\usepackage{complexity}
+
+\usepackage[style=ieee, backend=biber, citestyle=numeric-comp]{biblatex}
+\addbibresource{references.bib}
+
+
+\usepackage{comment}
+\usepackage[document]{ragged2e}
+\usepackage[margin=2.54cm]{geometry}
+%\newgeometry{twoside, bindingoffset=1cm, margin=2.54cm,marginparwidth=50pt,headsep=12pt,footskip=1.27cm}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{csquotes}
+\usepackage{subcaption}
+\usepackage{glossaries}
+\usepackage{xcolor}
+\usepackage{nomencl}
+\usepackage{fancyhdr}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+\usepackage{setspace}
+\onehalfspacing
+
+%\usepackage{newtxtext,newtxmath}
+\usepackage[a-2b]{pdfx}
+\usepackage{lmodern}
+
+
+\usepackage{amsfonts}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{siunitx}
+\usepackage[T1]{fontenc}
+\usepackage{epstopdf}
+\usepackage{blindtext}
+\usepackage{commath}
+\usepackage{float}
+%\usepackage[lofdepth, lotdepth]{subfig}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{epsfig}
+\captionsetup[table]{labelfont=bf, labelsep=period}
+\makenomenclature
+\pagestyle{plain}
+
+%\newcommand{\doublespace}
+
+\begin{comment}
+%{\addtolength{\baselineskip}{0.45\baselineskip}}
+\setlength{\topmargin}{0.2cm} \setlength{\headheight}{.2cm}
+\setlength{\headsep}{5mm} \setlength{\textheight}{210mm}
+\setlength{\textwidth}{155mm}
+%\setlength{\oddsidemargin}{2cm}
+% \setlength{\evensidemargin}{4cm}
+\setlength{\oddsidemargin}{1cm}
+\setlength{\evensidemargin}{4cm}
+
+\end{comment}
+
+\setlength{\parskip}{0.5ex plus0.4ex minus0.45ex}
+
+
+\newtheorem{definition}{Definition}[section]
+\newtheorem{thm}[definition]{Theorem}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{lemma}[definition]{Lemma}
+%\newtheorem{example}[definition]{Example}
+\theoremstyle{definition}
+\newtheorem{example}{Example}[section]
+%\newtheorem{thm}[definition]{Theorem}
+\newtheorem{pro}{Proof}[section]
+\newtheorem{remark}{Remark}
+\newtheorem{lem}{Lema}
+\newtheorem{prop}{Proposition}
+\def\tablename{\bf Table}
+\newcommand{\real}{\Re {\rm e}}
+\usepackage[english]{babel}
+\newcommand{\vs}{vs.\ }
+\renewcommand{\familydefault}{\rmdefault}
+
+\usepackage{lipsum}
+\usepackage[nopatch=footnote]{microtype}
+\usepackage{background}
+\backgroundsetup{
+  scale=1,
+  color=black,
+  opacity=0.5,
+  angle=0,
+  position=current page.south,
+  vshift=0mm,
+  contents={%
+    \thepage
+  }
+}
+
+\usepackage{hyperref}
+\hypersetup
+{
+%linktocpage=true,
+hidelinks=true
+}
+
+
+\begin{document}
+
+	\NoBgThispage
+	\begin{singlespace}
+	\begin{titlepage}
+	
+	%\thispagestyle{empty}
+		\begin{center}
+			{\LARGE\bf{[Thesis title]}\vskip .5cm}
+			\vskip .1cm ~\\
+   
+   \begin{figure}[H]
+		\centering
+		{{\includegraphics[height=45mm, width=45mm]{nust-logo.png}}}
+  \end{figure}
+  ~\\
+  ~\\
+  ~\\
+			{\Large{By}}\\~\\
+			
+			
+			{\Large{[Student name]}\\
+			}
+   {\Large(Registration No: 100101)\\
+			}
+			~\\
+			
+			~\\
+			~\\
+			{\Large
+				{Department of Physics}\vskip .5cm
+				{School of Natural Sciences}\vskip .5cm
+				{National University of Sciences and Technology (NUST)}\vskip
+				.5cm
+				{Islamabad, Pakistan}\vskip
+				.5cm
+				 (2026)}
+			\end{center}
+		\end{titlepage}
+  \end{singlespace}
+
+\NoBgThispage
+\begin{singlespace}
+\begin{titlepage}
+	% \pagenumbering{roman}
+	%\thispagestyle{empty}
+	\begin{center}
+		{\LARGE\bf{[Thesis title]}\vskip .5cm}
+		\vskip .1cm ~\\
+  {\Large
+  \begin{tabular}[t]{c}
+				
+				{{\includegraphics[height=40mm, width=40mm]{nust-logo.png}}}
+			\end{tabular}}
+   \vskip .1cm ~\\
+			{By}\\~\\
+			{[Student name]\\~\\}
+ { (Registration No: 111011)\\~\\}
+			\text{A thesis submitted to the National University of Sciences and Technology, Islamabad, }\vskip .5cm
+			\text{in partial fulfillment of the requirements for the degree of} \vskip .5cm\text{ Masters of Science in}\vskip .4cm \text{Physics}\\~\\
+			{Supervisor: [Title and name of supervisor]\\~\\
+			}
+			~\\~\\~\\
+		\text{School of Natural Sciences}\vskip .5cm
+		\text{National University of Sciences and Technology (NUST)}\vskip
+		.5cm
+			\text{Islamabad, Pakistan}\vskip
+		.5cm
+			 (2026)
+		\end{center}
+	\end{titlepage}
+\end{singlespace}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\NoBgThispage
+\newpage
+\pagenumbering{roman}
+\thispagestyle{empty}
+\begin{center}
+\textbf{\underline {THESIS ACCEPTANCE CERTIFICATE}}
+\end{center}
+Certified that final copy of MS Thesis written by Mr / Ms ------------------------------------(Registration No.-------------------------- ), of 			 (School/College/Institute) has been vetted by undersigned, found complete in all respects as per NUST Statutes/ Regulations/ Masters Policy, is free of plagiarism, errors, and mistakes and is accepted as partial fulfillment for award of Masters degree. It is further certified that necessary amendments as point out by GEC members and foreign/ local evaluators of
+the scholar have also been incorporated in the said thesis.
+\vspace{1cm}
+\begin{flushright}
+Signature:------------------------------------------------- \\	\vspace{.3cm}				Name of Supervisor: ----------------------------------- \\	\vspace{.3cm}			
+Date: ------------------------------------------------------\\ \vspace{.8cm}
+Signature (HoD):----------------------------------------\\	\vspace{.3cm}				
+Date:--------------------------------------------------------\\ \vspace{.8cm}
+Signature (Dean/Principal):--------------------------\\	\vspace{.3cm}		
+Date: ------------------------------------------------------								
+\end{flushright}
+
+\newpage
+\pagenumbering{roman}
+\thispagestyle{empty}
+\begin{flushright}
+Form TH-4
+\end{flushright}
+\begin{center}
+\textbf{\underline{ National University of Sciences and Technology} }\\\vspace{.2cm}
+MS THESIS WORK
+\end{center}
+
+We hereby recommend that the thesis prepared under our supervision by: Mr/Ms..........
+Titled:............................................................ be accepted in partial fulfilled the requirements for the award of MS degree.
+
+\begin{center}
+\textbf{\underline{Examination Committee Members}}
+
+\end{center}
+\begin{description}
+\item[1.] \textbf{Name}..........................................................Signature:  ...................\vskip 0.5cm
+\item[2.] \textbf{Name}..........................................................Signature:  ....................\vskip 0.5cm
+\item[3.] \textbf{Name}..........................................................Signature:  ....................\vskip 0.5cm
+\item[4.] \textbf{Name}..........................................................Signature:  ....................\vskip 0.5cm
+\textbf{Supervisor's Name}.......................................Signature:  ....................\vskip 1.5cm
+
+Head of Department's Signature.................................Date...................\vskip 02cm
+\begin{center}
+\underline{COUNTERSIGNED}
+\end{center}\vskip 1.5cm
+Principal/Dean.................................................Date......................
+\end{description}
+
+
+\NoBgThispage
+\newpage
+\pagenumbering{roman}
+	\thispagestyle{empty}
+\begin{center}
+\textbf{\underline {CERTIFICATE OF APPROVAL}}
+\end{center}
+
+This is to certify that the research work presented in this thesis, entitled “.......................” was conducted by Mr./Ms ..................................under the supervision of....................
+No part of this thesis has been submitted anywhere else for any other degree. This thesis is submitted to the......................... (Name of Department of the University)................... in partial fulfillment of the requirements for the degree of Master of Science in Field of ..................(Subject Name)...............
+Department of ………… National University of Sciences and Technology, Islamabad.
+
+Student Name: -------------------------------------------  
+    Signature: -------------------------------- \\~\\			Examination Committee:\\~\\
+    a)  External Examiner 1: Name-------------------------	      
+      Signature:-------------------------------- \\~\\			
+	(Designation and Office Address)\\~\\
+--------------------------------\\~\\
+b)  External Examiner 2: Name-------------------------	Signature:-------------------------------- 	\\	~\\	
+	(Designation and Office Address)\\~\\
+-------------------------------\\~\\
+Name of Supervisor: -------------------------------------- 	Signature:--------------------------------\\	~\\		
+Name of Dean/HOD: --------------------------------------Signature:--------------------------------\\			
+								
+\NoBgThispage
+\newpage
+\pagenumbering{roman}
+	\thispagestyle{empty}
+\begin{center}
+\textbf{\underline {AUTHOR’S DECLARATION}}
+\end{center}
+
+    I...................................hereby state that my MS thesis titled “........................................\\................................................................................” is my own work and has not been submitted previously by me for taking any degree from National University of Sciences and Technology, Islamabad or anywhere else in the country/ world.
+\\
+At any time if my statement is found to be incorrect even after I graduate, the university has the right to withdraw my MS degree.
+
+\vspace{1cm}
+\begin{flushright}
+Student Signature:--------------------------------------\\~\\
+Name:------------------------------------------------------ \\~\\					
+Date: ------------------------------------------------------ \\			\end{flushright}
+
+\NoBgThispage
+  \newpage
+  \pagenumbering{roman}
+	\thispagestyle{empty}
+\begin{center}
+\textbf{\underline {PLAGIARISM UNDERTAKING}}
+\end{center}
+
+I solemnly declare that research work presented in the thesis titled “...............................\\.............................................................................................................” is solely my research work with no significant contribution from any other person. Small contribution/ help wherever taken has been duly acknowledged and that complete thesis has been written by me.
+\\~\\
+I understand the zero tolerance policy of the HEC and National University of Sciences and Technology (NUST), Islamabad towards plagiarism. Therefore, I as an author of the above titled thesis declare that no portion of my thesis has been plagiarized and any material used as reference is properly referred/cited.\\~\\
+I undertake that if I am found guilty of any formal plagiarism in the above titled thesis even after award of MS degree, the University reserves the rights to withdraw/revoke my MS degree and that HEC and NUST, Islamabad has the right to publish my name on the HEC/University website on which names of students are placed who submitted plagiarized thesis.
+
+\begin{flushright}
+Student Signature:--------------------------------------\\~\\
+Name:------------------------------------------------------ \\~\\					
+Date: ------------------------------------------------------ \\			\end{flushright}
+
+\NoBgThispage  
+  \newpage
+  \pagenumbering{roman}
+	\thispagestyle{empty}
+\begin{center}
+\textbf {DEDICATION}
+\end{center}
+\begin{center}
+{{\small
+  \bfseries \textcolor{blue}{Center [Time New Roman, Bold, Font Size 1...}
+}
+}\\
+\end{center}
+Start typing the dedication here.
+\vspace{2cm}
+
+\newpage
+
+\pagenumbering{roman}
+\begin{center}
+     \bf{ACKNOWLEDGEMENTS} 
+\end{center}
+
+Start typing the acknowledgment here. 
+
+\onehalfspacing
+
+\newpage
+\tableofcontents
+\listoftables
+\addcontentsline{toc}{chapter}{LIST OF TABLES}
+
+\newpage
+\listoffigures
+\addcontentsline{toc}{chapter}{LIST OF FIGURES}
+
+
+\newpage
+\addcontentsline{toc}{chapter}{LIST OF SYMBOLS, ABBREVIATIONS AND ACRONYMS}
+\chapter*{LIST OF SYMBOLS, ABBREVIATIONS AND ACRONYMS}
+A	the letter A\\
+B	the letter B\\
+CGS	Center for Graduate Studies\\~\\
+
+
+\newpage
+\addcontentsline{toc}{chapter}{ABSTRACT}
+\chapter*{Abstract}
+\vspace{1cm}
+Start typing the abstract here.\\~\\
+{\bf Keywords:}	Summary; format, font, abstract, keywords.
+
+\onehalfspacing
+\newpage
+\pagenumbering{arabic}
+\chapter{INTRODUCTION}
+
+
+\begin{equation}
+\begin{split}
+|\psi\rangle=\alpha|0\rangle+\beta|1\rangle, \\
+\text{with } |\alpha|^2 + |\beta|^2 =1.
+\end{split}
+\label{q_state}
+\end{equation}
+\chapter{LITERATURE REVIEW}
+
+\chapter{METHODS}
+
+\chapter{RESULTS AND DISCUSSION}
+
+\chapter{CONCLUSIONS AND RECOMMENDATIONS}
+
+\begin{onehalfspace}
+\printbibliography[heading=bibintoc, title={BIBLIOGRAPHY}]
+\end{onehalfspace}
+
+\begin{appendix}
+\begin{center}
+\chapter {DESCRIPTION OF DEFAULT SUBHEADING SCHEME}
+\end{center}
+This appendix illustrates the default style of subheadings as chapter-level headings is bold, all upper case, and centered. Otherwise the font is the same font family and the same size or no more than 2 font points larger (e.g. 14 points vs. 12).
+\section{First-Level Subheading}
+The default format for first-level subheadings is left-justified, bold, and upper and lower case (UC/LC). Alternatively, you may use plain (not bold), and all upper case (UC).  The former of the two is built into this Word document. In either case, it should be the same size as the text font.  If you use upper/lower case, capitalize words as you usually would in a title.\\~\\
+	A blank line above the subheading has already been built into this template so it is not necessary to leave another blank line before headings so long as you are using the proscribed heading and subheading styles. Styles were discussed in Chapter 1 of this document.
+ \subsection{Second-Level Subheadings}
+ Second-level headings are also justified left. If the first-level subheading was UC/LC and bold, the second-level subheading will be UC/LC and italicized. That is the style built into this Word document.\\~\\
+	Since a blank line above each subheading was built into this template, it is not necessary to leave another blank line before headings so long as you are use the proscribed subheading style.
+\subsubsection{Third-Level Subheadings}
+Third-level subheadings are plain UC/LC text and underlined. Capitalize as with the other subheadings. 
+\subsubsection{Fourth-Level Subheadings}
+
+Fourth-level subheadings, if needed, should be plain UC/LC text, flush left. 
+\end{appendix} 
+\newpage
+\addcontentsline{toc}{chapter}{LIST OF PUBLICATIONS}
+\begin{center}
+\textbf {LIST OF PUBLICATIONS}
+\end{center}
+
+
+
+\end{document}
